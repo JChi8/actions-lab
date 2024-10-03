@@ -13,7 +13,7 @@ jobs:
   say-goodbye:
     needs: say-hello
     runs-on: ubuntu-latest
-    if github.status_code == '0'
+    if: github.status_code == '0'
     steps:
       - name: Print Goodbye World   # Add this
         run: echo "Goodbyte, World!"  # Add this
